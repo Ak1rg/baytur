@@ -1,0 +1,114 @@
+.switch{
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, .7);
+    height: 120px;
+    width: 70px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+    cursor: pointer;
+    img{
+        width: 40px;
+    }
+}
+
+.switch:hover{
+    transition: .2s;
+    background-color: var(--yellow-main)
+}
+
+.leftSwitch{
+    @extend .switch;
+    left: 0px;
+}
+.rightSwitch{
+    @extend .switch;
+    right: 0px;
+}
+
+
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.field {
+    background-image: url(img/main_swiper_field.png);
+}
+.tractor{
+    background-image: url(img/main_swiper_tractor.png);
+}
+
+.box{
+    background: rgba(57, 26, 0, 0.86);
+    padding: 40px;
+    margin: 0px 80px;
+}
+
+.title{
+    font-weight: 300;
+    font-size: 32px;
+    color: white;
+    padding-bottom: 25px;
+}
+
+.text{
+    font-size: 15px;
+    color:white;
+    padding-bottom: 25px;
+}
+
+.btn{
+    font-size: 13px;
+    background-color: var(--yellow-main);
+    border: var(--yellow-main) 1px solid;
+    padding: 15px 35px;
+    border-radius: 50px;
+    color: white;
+    transition: .2s;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #391a00;
+    border: solid #391a00 1px;
+    transition: .2s;
+}
+
+@media screen and (max-width:1024px) {
+    .title{
+        font-size: 26px;
+    }
+    .text{
+        font-size: 12px;
+    }
+    .btn{
+        font-size: 11px;
+    }
+
+    .switch{
+        height: 100px;
+        width: 50px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .title{
+        font-size: 22px;
+    }
+    .text{
+        font-size: 10px;
+    }
+    .btn{
+        font-size: 10px;
+    }
+}
